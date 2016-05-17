@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-Test" version="2.0">
+  <name>myEcho</name>
+  <description>这是一个测试插件</description>
+  <license>Apache 2.9</license>
+  <keywords>cordova,Test</keywords>
+  <plaform name="ios">
+  	<js-module scr="www/myEcho.js" name="TestPL">
+  		<clobbers target="navigator.TestPL"/>
+  	</js-module>
+     <config-file target="config.xml" parent="/*">
+       <feature name="myEcho">
+       	     <param name="ios-package" value="TestPL"/>
+       </feature>
+     </config-file>
+     <header-file scr="scr/ios/TestPL.h"/>
+     <source-file scr="scr/ios/TestPL.m"/>
+  </plaform>
+</plugin>
+
